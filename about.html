@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Jaswinder Singh</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js"> </script>
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,700);
+
+
+
+        .split-screen-container {
+            height: 500px;
+            width: 100%;
+            position: relative;
+            background-color: #000;
+            overflow-x: scroll;
+            color: white;
+        }
+
+        .split-screen-left,
+        .split-screen-right {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1e4356;
+
+        }
+
+
+        .inner-split-right,
+        .inner-split-left {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            float: left;
+
+        }
+
+        .image-1-initial,
+        .image-1-transition,
+        .image-2-initial,
+        .image-2-transition {
+            width: 360px;
+            height: 360px;
+            position: absolute;
+            bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+        }
+
+        .image-1-initial,
+        .image-2-initial {
+            z-index: 10;
+            opacity: 1;
+        }
+
+        .image-1-transition,
+        .image-2-transition {
+            z-index: 9;
+            opacity: 0;
+        }
+
+
+        #profile-2-text {
+            background-color: black;
+            display: none;
+        }
+
+        img {
+            width: 360px;
+            height: 360px;
+        }
+
+
+
+
+        .see-more {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            text-align: center;
+            border: 2px solid #F67467;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 90px;
+            line-height: 40px;
+            color: #fff;
+            font-family: 'Fira Sans', sans-serif;
+            text-decoration: none;
+            transition: all .3s linear;
+        }
+
+
+
+        .about-more {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            text-align: center;
+            border: 2px solid #F67467;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 200px;
+            line-height: 40px;
+            color: #fff;
+            font-family: 'Fira Sans', sans-serif;
+            text-decoration: none;
+            transition: all .3s linear;
+        }
+
+        .experience-more {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            text-align: center;
+            border: 2px solid #F67467;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 300px;
+            line-height: 40px;
+            color: #fff;
+            font-family: 'Fira Sans', sans-serif;
+            text-decoration: none;
+            transition: all .3s linear;
+        }
+
+        .see-more:hover {
+            background-color: #f67467;
+        }
+
+        .text-container {
+            width: 70%;
+            margin: auto;
+            margin-top: 40px;
+
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            color: #fff;
+            transition: all .2s linear;
+            z-index: 11;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            transform: rotate(1turn);
+        }
+
+        .close-left {
+            left: 1.2rem;
+        }
+
+        .close-right {
+            right: 1.2rem;
+        }
+
+
+
+        #myCanvasContainer {
+            width: 73%;
+            margin: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top d-flex align-items-center ">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="logo">
+                <h1 class="text-light"><a href="index.html"><span>JASWINDER SINGH</span></a></h1>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active " href="about.html">About</a></li>
+    
+                    <li><a href="portfolio.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <section class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>About Me</h2>
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li>About Me</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End About Us Section -->
+
+        <section class="about" data-aos="fade-up">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="assets/img/about.jpeg" class="img-fluid" style="height: 500px;" alt="">
+                    </div>
+                    <div class="col-lg-8 pt-4 pt-lg-0">
+                        <div class="split-screen-container">
+
+                            <div class="split-screen-right">
+                                <div class="inner-split-left text-center " id="profile-2">
+                                    <h4 class="mt-5">Hi, I am Jaswinder Singh</h4>
+                                    <a href="#" class="see-more mt-5" id="open-right">About Me</a>
+
+                                    <a href="#" class="about-more mt-5" id="open-right-study">Study</a>
+                                    <a href="#" class="experience-more mt-5" id="open-right-experience">Experience</a>
+
+                                </div>
+                                <div class="inner-split-right" id="profile-2-text">
+                                    <p class="close close-right">X</p>
+                                    <div class="text-container">
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+
+        <!-- ======= Our Skills Section ======= -->
+        <section class="skills" data-aos="fade-up">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>AREAS OF EXPERTISE
+                    </h2>
+                </div>
+
+                <div class="skills-content">
+
+                    <div id="myCanvasContainer">
+                        <canvas style="width: 100%;" id="myCanvas">
+                            <p>Anything in here will be replaced on browsers that support the canvas element</p>
+                            <ul>
+                                <li><a href="Javascript:Void(0)">ReactJs</a></li>
+                                <li><a href="Javascript:Void(0)">Redux</a></li>
+                                <li><a href="Javascript:Void(0)">Node.Js</a></li>
+                                <li><a href="Javascript:Void(0)">Laravel</a></li>
+                                <li><a href="Javascript:Void(0)">Yii2</a></li>
+                                <li><a href="Javascript:Void(0)">Mobile Responsive</a></li>
+                                <li><a href="Javascript:Void(0)">HTML</a></li>
+                                <li><a href="Javascript:Void(0)">c</a></li>
+                                <li><a href="Javascript:Void(0)">c++</a></li>
+                                <li><a href="Javascript:Void(0)">computer graphics</a></li>
+                                <li><a href="Javascript:Void(0)">bootstrap</a></li>
+                                <li><a href="Javascript:Void(0)">software development</a></li>
+                                <li><a href="Javascript:Void(0)">CSS</a></li>
+                                <li><a href="Javascript:Void(0)">Javascript</a></li>
+                                <li><a href="Javascript:Void(0)">PHP</a></li>
+                                <li><a href="Javascript:Void(0)">JQuery</a></li>
+                                <li><a href="Javascript:Void(0)">Ajax</a></li>
+                                <li><a href="Javascript:Void(0)">WordPress</a></li>
+                            </ul>
+                        </canvas>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Our Skills Section -->
+
+
+    </main><!-- End #main -->
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+
+
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Jaswinder Singh</span></strong>. All Rights Reserved
+            </div> 
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+
+    <script src="assets/TagCanvas-master/tagcanvas.min.js" type="text/javascript"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        $('#open-right').click(function(e) {
+
+            e.preventDefault();
+
+            $(".text-container").html('  <h3>Hi, My name is Jaswinder Singh</h3>\n\
+                        <p class="fst-italic">\n\
+                            Full-stack web developer with long-term period of the professional experience in building websites. Experienced team player, excellent communicator, self-motivated developer and quick learner. Love challenging to solve complex problems and learning new trend of technologies. Strive to provide the highest quality of service to the clients and achieve their 100% satisfaction.\n\
+                            <h5> Frontend</h5>\n\
+                           <ul>\n\
+                                <li>  &#9679 React, Hooks, Redux, Thunk, Redux-Toolkit, Jest, Enzyme, etc. (3 years) </li>\n\
+                                    <li>  &#9679 HTML5, CSS3/SCSS/LESS, JavaScript/ES6+/TypeScript (6 years) </li>\n\
+                                        <li>  &#9679 NPM, Yarn, Webpack, Babel, Gulp, Browserfy, Grunt, etc. </li>\n\
+                                            <li>  &#9679 Figma, Adobe XD, Adobe Illustrator, Adobe Photoshop etc. </li>\n\
+                                </ul>\n\
+                                <h5> Backend</h5>\n\
+                           <ul>\n\
+                                <li>  &#9679 Expert Level of PHP(5 years)</li>\n\
+                                    <li>  &#9679 Expert Level of Laravel (4 years)</li>\n\
+                                        <li>  &#9679 Expert Level of Yii2 (4Years) </li>\n\
+                                            <li>  &#9679 Intermediate Level of Express (3 years) </li>\n\
+                                </ul>\n\
+                                <h5> Database Management System</h5>\n\
+                           <ul>\n\
+                                <li>  &#9679 Expert Level of MySQL (5 years)</li>\n\
+                                    <li>  &#9679 Intermediate Level of MongoDb(2 years)</li>\n\
+                                </ul>\n\
+                                <h5> Tools</h5>\n\
+                           <ul>\n\
+                                <li>  &#9679 Git, GitHub, GitLab, Bitbucket, etc.</li>\n\
+                                    <li>  &#9679 Scrum, Trello, Jira, Asana, etc.</li>\n\
+                                        <li>  &#9679 AWS, GCP, Heroku, cPanel, Kubernate, etc. </li>\n\
+                                </ul>\n\
+                                                        </p>');
+
+            $('#profile-2-text').show();
+
+
+            $('.split-screen-right').velocity({
+                translateX: ["1%"]
+            }, 800);
+
+            $('#profile-2-text').velocity({
+                width: ["99%", '50%']
+            }, 800);
+            $('#profile-2').velocity({
+                width: ["0.1%", '50%']
+            }, 800);
+
+
+            $(this).velocity({
+                opacity: [0, 1]
+            }, 200);
+
+        })
+
+
+
+
+        $('#open-right-experience').click(function(e) {
+
+            e.preventDefault();
+
+            $(".text-container").html('<ul> <li><h5> Experience</h5><i class="bi bi-check2-circle"></i> <b>Full Stack Developer  </b> <br> <em> MyKeeper(Contract) | March 2020 – May 2022 </em><br> \n\
+                 <ul>\n\
+                    <li> &#9679 Revamp the whole website in reactJs with redux with some additional features like business to business integration of keeper and designed virtual funeral Page</li>\n\
+                    <li> &#9679 Built WordPress Plugin for the business user to install features of MyKeeper in CMS based websites </li>\n\
+                    <li> &#9679 Worked on website optimization bringing down the page load times by about 0.5 seconds</li>\n\
+                    <li> &#9679 Added S3 bucket cloud storage feature for upload images in keeper gallery</li>\n\
+                    </ul></li>\n\
+                    <li> <i class="bi bi-check2-circle"></i> <b>Full Stack Developer  </b> <br> <em> Invito Software Solutions | April 2019 – January 2020 </em><br> \n\
+                 <ul>\n\
+                    <li> &#9679 Worked in MERN technologies for various projects and deployed them on EC2 instance of aws with ubuntu and apache server</li>\n\
+                    <li> &#9679 Distributed tasks between junior front-end and backend developers. Also Co-ordinate with native mobile development team and provide rest api\'\s according to the project requirements </li>\n\
+                    <li> &#9679 Completed charity fundraising project in Laravel with ‘Join as Volunteer’ feature and integrated stripe payment gateway</li>\n\
+                    <li> &#9679 Developed admin pannel in yii2 for the ‘Personal Trainer Finder’ application in which admin can analyse application activities for the application support</li>\n\
+                    </ul></li>\n\
+                    <li> <i class="bi bi-check2-circle"></i> <b>Web Developer  </b> <br> <em>The Brihaspati Infotec | June 2017 – April 2019</em><br> \n\
+                 <ul>\n\
+                    <li> &#9679 Completed one POS project with the team which have integration of Clover api, Datatrax api for travel bookings as well as developed custom module for the Drupal 7</li>\n\
+                    <li> &#9679 Completed two small backend admin based projects for mobile applications in Laravel 8 and one in Yii2 PHP framework with the implemented socket.io feature with node.js for chat between team</li>\n\
+                    <li> &#9679Worked on different WordPress website which have implementation of custom themes and Plugins like woo-commerce</li>\n\
+                    <li> &#9679 Worked in point based game for <a href="https://www.injoyglobal.com/home">Injoy Global</a> and also gained experience in google service api like Analytics, Maps Location, Oauth etc</li>\n\
+                    </ul></li>\n\
+                </ul>\n\
+                 ');
+
+            $('#profile-2-text').show();
+
+
+            $('.split-screen-right').velocity({
+                translateX: ["1%"]
+            }, 800);
+
+            $('#profile-2-text').velocity({
+                width: ["99%", '50%']
+            }, 800);
+            $('#profile-2').velocity({
+                width: ["0.1%", '50%']
+            }, 800);
+
+
+            $(this).velocity({
+                opacity: [0, 1]
+            }, 200);
+
+        })
+
+
+
+
+        $('#open-right-study').click(function(e) {
+
+            e.preventDefault();
+
+            $(".text-container").html('<ul><li> <h5> EDUCATIONAL HISTORY </h5> <i class="bi bi-check2-circle"></i> <b>Web Designing and Programming (May 2020- June 2022)</b> <br> <em>College CDI, Montreal </em> <p> <b>Coursework : </b>ReactJs, NodeJs, Server Management,  Adobe Photoshop, Adobe Illustrator, Adobe XD,  Data Structure, Algorithms, PHP, JavaScript (Es6), Animations, Advance HTML  </p> <br>\n\ <i class="bi bi-check2-circle"></i> <b>Bachelor of Technology in CSE (Aug 2012- May 2016)</b> <br> <em>Punjab Technical University </em> <p> <b>Coursework : </b> Fundamentals of Computer Programming, Java, Web Programming, RDBS, Artifical Intelligence, Microprocessor </p> <br>\n\ </li> </ul>');
+
+            $('#profile-2-text').show();
+
+
+            $('.split-screen-right').velocity({
+                translateX: ["1%"]
+            }, 800);
+
+            $('#profile-2-text').velocity({
+                width: ["99%", '50%']
+            }, 800);
+            $('#profile-2').velocity({
+                width: ["0.1%", '50%']
+            }, 800);
+
+
+            $(this).velocity({
+                opacity: [0, 1]
+            }, 200);
+
+        })
+
+
+
+        $('.close-right').click(function() {
+
+
+            $('.split-screen-right').velocity({
+                translateX: 0
+            }, 800);
+
+            $('#profile-2-text').velocity({
+                width: ['0.1%', "60%"]
+            }, 800);
+            $('#profile-2').velocity({
+                width: ['99.9%', "40%"]
+            }, 800);
+
+
+            $('#open-right').velocity({
+                opacity: [1, 0]
+            }, {
+                delay: 800,
+                duration: 200
+            });
+            $('#open-right-study').velocity({
+                opacity: [1, 0]
+            }, {
+                delay: 800,
+                duration: 200
+            });
+            $('#open-right-experience').velocity({
+                opacity: [1, 0]
+            }, {
+                delay: 800,
+                duration: 200
+            });
+
+
+            $('#profile-2-text').hide();
+
+        })
+
+
+        window.onload = function() {
+            try {
+                TagCanvas.textColour = 'black';
+                TagCanvas.outlineColour = '#ff9999';
+                TagCanvas.wheelZoom = true;
+                TagCanvas.zoom = 1.0;
+                TagCanvas.zoomMax = 3.0;
+                TagCanvas.padding = 5;
+                TagCanvas.outlineOffset = 1;
+                TagCanvas.maxBrightness = 5;
+                TagCanvas.Start('myCanvas');
+
+            } catch (e) {
+                // something went wrong, hide the canvas container
+                document.getElementById('myCanvasContainer').style.display = 'none';
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>
