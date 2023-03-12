@@ -1,0 +1,136 @@
+body {
+    background-color: #F5F5F5;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+header {
+    
+    
+     background-color: #391F14 !important;
+    
+    color: white;
+    
+}
+.m0 {
+    margin: 0;
+}
+.custommargin {
+    margin: 0;
+    padding-top: 19px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Cormorant, serif;
+}
+p{    
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    color: rgb(100, 103, 108);
+}
+
+.banner {
+    background-color: #391F14;
+    min-height: 570px;
+    color: white;
+}
+
+.bg-dark {
+     background-color: #391F14 !important;
+}
+
+.btn-primary {
+        border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: all 0.6s ease 0s;
+    background-image: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(168, 84, 50);
+    background-position: right center;
+    padding: 13px 29px !important;
+    text-transform: capitalize !important;
+    color: rgb(255, 255, 255) !important;
+    display: inline-block !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    background-size: 200% !important;
+}
+
+.mine-auto {
+    margin-left: auto!important;
+    margin-right: 18px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 19px;
+}
+
+.mybanner {
+    background-image: url(img/banner.webp);
+    min-height: 570px;
+    background-size: cover;
+    
+}
+
+.menu .active a {
+  background:  rgb(168, 84, 50);
+}
+
+.abtbanner {
+    background-image: url(img/abtbanner.webp);
+    min-height: 570px;
+    background-size: cover;
+    
+}
+
+.roombanner { 
+    background-image: url(img/room.webp);
+    min-height: 570px;
+    background-size: cover;
+    
+}
+.cntctbanner { 
+    background-image: url(img/cntct.webp);
+    min-height: 570px;
+    background-size: cover;
+    
+}
+
+.myfloat {
+    position: absolute;
+}
+.myfloat h1{
+    font-size: 93px;
+}
+
+.about-img  {
+    background-image: url(img/about.webp);
+    background-repeat: no-repeat;
+}
+.about-font-img  {
+   padding: 36%;
+    padding-bottom: 7%;
+}
+
+.section-tittle h2 {
+    color: rgb(168, 84, 50);
+    
+}
+.client-caption a {
+    color: rgb(168, 84, 50);
+    
+}
+
+.mybgnew {
+    background-color: #FFF7F3;
+}
+
+footer {
+    background-color: #391F14 !important;
+    color: white;
+}
